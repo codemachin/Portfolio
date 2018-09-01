@@ -1,13 +1,17 @@
 <!DOCTYPE html>
 <html lang = "en">
 <head>
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, shrink-to-fit=no">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
 	<title>Vivek Shankar</title>
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+	<link href="https://fonts.googleapis.com/css?family=Libre+Franklin:300,400|Roboto" rel="stylesheet">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 	<link href="port.css" rel ="stylesheet">
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
-<nav class="navbar navbar-inverse navbar-fixed-top" style="padding: 1%;">
+<!-- <nav class="navbar navbar-inverse navbar-fixed-top" style="padding: 1%;">
 	
 	
 		<a href ="#" style="float: left;color: white;"><h2 class="abc"><b><i class="fa fa-user-circle-o" aria-hidden="true"></i> Vivek Shankar</b></h2></a>
@@ -20,92 +24,355 @@
 	
 	
 
-</nav>
+</nav> -->
+
 <body>
 	<header>
-		<div>
-			<h2><strong>Hi, I am Vivek</strong></h2>
-			I am a computer science graduate with a special desire in technology. I am passionate about technology and i have application level experience in various languages. Given proper environment and chance to learn i can prove to be of great value.
-		</div>
+		<nav id="navbar" class="navbar navbar-expand-sm navbar-default fixed-top" style="color: white">
+		  <a class="navbar-brand">Vivek Shankar</a>
+		  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+		    <span class="navbar-toggler-icon"></span>
+		  </button>
+		  <div class="collapse navbar-collapse justify-content-end" id="collapsibleNavbar">
+		    <ul class="navbar-nav">
+		      <li class="nav-item">
+		        <a class="nav-link" >Home</a>
+		      </li>
+		      <li class="nav-item">
+		        <a class="nav-link" >Work</a>
+		      </li>
+		      <li class="nav-item">
+		        <a class="nav-link" >About</a>
+		      </li>
+		      <li class="nav-item">
+		        <a class="nav-link" >Contact</a>
+		      </li>    
+		    </ul>
+		  </div>
+		</nav>
+		
 	</header>
-	<section>
-		<h2>About Me</h2>
-		<div class="cod">
-		
-		<p>I am a travel fanatic an i travel a lot. That's the only thing i love more than computer and technology. I like intellectual thinking. I keep on exploring new things and myself. I used to write a lot during my school times, but for last 3 years, all I have been writing is "Code"! I have finally decided to pick up my "Internet pen" and start writing again and hence this blog.(yes, yes, i have gotten a little rusty). Currently, i build Android Applications and design Web Applications. </p>
-		
+	<section id="bg" style="height: 100vh">
+		<div class="container" id="home">
+			<div class="item1" style="color: #D4571E">Portfolio</div>
+			<div class="item2">
+				<h1 class="regular">Mean stack,Dev ops,</h1>
+				<h1 class="regular">Design & Architecture.</h1>
+			</div>
+			<div class="semibold item3">
+				BY VIVEK SHANKAR
+			</div>
+			<div class="item4 bounce"><i class="fas fa-long-arrow-alt-down"></i></div>
 		</div>
 	</section>
-	<section>
-		<div><h2>Portfolio</h2>
+	<section style="padding-top: 4%">
+		<div data-aos="zoom-in-up">
+			<span class="section-heading">Some Projects</span>
 		</div>
-		<div class = "container-fluid">
-			
-			<div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 tt1 ab">
-			<div class="txt">
-				Project 1<br>
-				<a href="" style="color: white;">Tour and Travels<br>(Website and App)</a>
+		<div id="cardsme" class = "someProjects container-fluid">
+			<div data-aos="zoom-in-up" class="wrap" style="display:flex;justify-content: space-around ;">
+				<div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 card bg-dark text-white">
+				  <img class="card-img" src="inv.jpg" alt="Card image" width="100%">
+				  <div class="card-img-overlay">
+				    <h5 class="card-title">Card title</h5>
+				    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+				    <p class="card-text">Last updated 3 mins ago</p>
+				  </div>
 				</div>
+				<div style="justify-content : center;">
+					<blockquote>Inventory management system</blockquote>
 				</div>
-			
+			</div>
 
-			
-			<div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 ecom1 ab">
-			<div class="txt">
-				Project 2<br>
-				<a href="" style="color: white;">Ecommerce Website</a>
+			<div data-aos="zoom-in-up" class="wrap" style="display:flex;justify-content: space-around ;">
+				<div style="justify-content : center;">
+					<blockquote>Ecommerce website</blockquote>
+				</div>
+				<div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 card bg-dark text-white">
+				  <img class="card-img" src="ecom.jpeg" alt="Card image" width="100%">
+				  <div class="card-img-overlay">
+				    <h5 class="card-title">Card title</h5>
+				    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+				    <p class="card-text">Last updated 3 mins ago</p>
+				  </div>
+				</div>
 			</div>
-			</div>
 			
+			<div data-aos="zoom-in-up" class="wrap" style="display:flex;justify-content: space-around ;">
+				<div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 card bg-dark text-white">
+				  <img class="card-img" src="tnt.jpg" alt="Card image" width="100%">
+				  <div class="card-img-overlay">
+				    <h5 class="card-title">Card title</h5>
+				    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+				    <p class="card-text">Last updated 3 mins ago</p>
+				  </div>
+				</div>
+				<div style="justify-content : center;">
+					<blockquote>Inventory management system</blockquote>
+				</div>
+			</div>
 
+			<div data-aos="zoom-in-up" class="wrap" style="display:flex;justify-content: space-around ;">
+				<div style="justify-content : center;">
+					<blockquote>Socket Chat Application</blockquote>
+				</div>
+				<div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 card bg-dark text-white">
+				  <img class="card-img" src="ecom.jpeg" alt="Card image" width="100%">
+				  <div class="card-img-overlay">
+				    <h5 class="card-title">Card title</h5>
+				    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+				    <p class="card-text">Last updated 3 mins ago</p>
+				  </div>
+				</div>
+			</div>
 			
-			<div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 im1 ab">
-			<div class="txt">
-			Project 3<br>
-			<a href="" style="color: white;">Inventory Management</a>
-			</div>
-			</div>
 			
 		</div>
 
 	</section>
-	<section-1>
+	<section class="featured-card-section" style="padding-top: 4%;margin-bottom: 40px;">
+		<div data-aos="zoom-in-up">
+			<span class="section-heading">Some Projects</span>
+		</div>
+		<div class="container">
+                <div data-aos="fade-right" class="card-wrap flex-container">
+    			                         <div class="card" style="box-shadow: 0 -2px 40px rgba(142,156,172,.2);">
+                    <div class="image-wrap" style="background-image: url(techno.jpg)">                             
+	                    <div class="company-logo">
+	            						<img typeof="foaf:Image" src="btech.jpg" width="100%" alt="">             
+	            		</div>          
+                    </div>
+                    <div class="text-wrap">
+                        <h6>New!</h6>
+                        <h4>The Rise of the Container Platform</h4>
+                      	<p>
+                      		Learn the differences between a container and a container platform and the key requirements around security, operations and orchestration that organizations should be looking for in an enterprise-grade platform.
+                      	</p>                     
+                      	<a href="https://goto.docker.com/Q218-0625-Content-IDCWhitePaper_LP.html" target="_blank" class=" btn btn-primary">
+                      		Read the White Paper
+                      	</a>                      
+                    </div>
+                  </div>	
+                </div>
+                <div data-aos="fade-left" class="card-wrap flex-container">
+    			                         <div class="card" style="box-shadow: 0 -2px 40px rgba(142,156,172,.2);">
+                    <div class="image-wrap" style="background-image: url(chin.jpg)">                             
+	                    <div class="company-logo">
+	            						<img typeof="foaf:Image" src="CBSE-CLASS-XII-LOGO.jpeg" width="100%" alt="">             
+	            		</div>          
+                    </div>
+                    <div class="text-wrap">
+                        <h6>New!</h6>
+                        <h4>The Rise of the Container Platform</h4>
+                      	<p>
+                      		Learn the differences between a container and a container platform and the key requirements around security, operations and orchestration that organizations should be looking for in an enterprise-grade platform.
+                      	</p>                     
+                      	<a href="https://goto.docker.com/Q218-0625-Content-IDCWhitePaper_LP.html" target="_blank" class=" btn btn-primary">
+                      		Read the White Paper
+                      	</a>                      
+                    </div>
+                  </div>	
+                </div>
+                <div data-aos="fade-right" class="card-wrap flex-container">
+    			                         <div class="card" style="box-shadow: 0 -2px 40px rgba(142,156,172,.2);">
+                    <div class="image-wrap" style="background-image: url(rkmv.jpg)">                             
+	                    <div class="company-logo">
+	            						<img typeof="foaf:Image" src="CBSE-CLASS-X-LOGO.jpg" width="100%" alt="">             
+	            		</div>          
+                    </div>
+                    <div class="text-wrap">
+                        <h6>New!</h6>
+                        <h4>The Rise of the Container Platform</h4>
+                      	<p>
+                      		Learn the differences between a container and a container platform and the key requirements around security, operations and orchestration that organizations should be looking for in an enterprise-grade platform.
+                      	</p>                     
+                      	<a href="https://goto.docker.com/Q218-0625-Content-IDCWhitePaper_LP.html" target="_blank" class=" btn btn-primary">
+                      		Read the White Paper
+                      	</a>                      
+                    </div>
+                  </div>	
+                </div>
+        </div>
+	</section>
+	<section>
+		<div class="checker" data-aos="zoom-in-up">
+			<span class="section-heading">Skills</span>
+		</div>
 		<div class="container" style="padding: 2%;">
-		
-			<div class="col-xs-12 col-sm-12 col-md-6 col-lg-8">
-				<h2>Educational Qualification</h2>
-				<ul>
-					<li>B.Tech in IT</li>
-					<li>12 from chinmaya bokaro</li>
-					<li>10 from R.K.M.V deoghar</li>
-				</ul>
-			</div>
-			<div class="col-xs-12 col-sm-12 col-md-6 col-lg-4">
-				<h2>Skills</h2>
-				<ul>
-					<li>Web Developer</li>
-					<li>HTML, CSS, PHP, MYSQL</li>
-					<li>Android developer</li>
-					<li>Java Programmer</li>
-				</ul>
+			<div class="card-wrap flex-container" style="padding: 0">
+    			<div data-aos="flip-up" class="card prog" style="padding:2%;box-shadow: 0 -2px 40px rgba(142,156,172,.2);">
+    				<div class="skillbar clearfix " data-percent="20%">
+				<div class="skillbar-title" style="background: #d35400;"><span>HTML5</span></div>
+				<div class="skillbar-bar" style="background: #e67e22;"></div>
+				<div class="skill-bar-percent">20%</div>
+			</div> <!-- End Skill Bar -->
+
+			<div class="skillbar clearfix " data-percent="25%">
+				<div class="skillbar-title" style="background: #2980b9;"><span>CSS3</span></div>
+				<div class="skillbar-bar" style="background: #3498db;"></div>
+				<div class="skill-bar-percent">25%</div>
+			</div> <!-- End Skill Bar -->
+
+			<div class="skillbar clearfix " data-percent="50%">
+				<div class="skillbar-title" style="background: #2c3e50;"><span>jQuery</span></div>
+				<div class="skillbar-bar" style="background: #2c3e50;"></div>
+				<div class="skill-bar-percent">50%</div>
+			</div> <!-- End Skill Bar -->
+
+			<div class="skillbar clearfix " data-percent="40%">
+				<div class="skillbar-title" style="background: #46465e;"><span>PHP</span></div>
+				<div class="skillbar-bar" style="background: #5a68a5;"></div>
+				<div class="skill-bar-percent">40%</div>
+			</div> <!-- End Skill Bar -->
+
+			<div class="skillbar clearfix " data-percent="75%">
+				<div class="skillbar-title" style="background: #333333;"><span>Wordpress</span></div>
+				<div class="skillbar-bar" style="background: #525252;"></div>
+				<div class="skill-bar-percent">75%</div>
+			</div> <!-- End Skill Bar -->
+
+			<div class="skillbar clearfix " data-percent="100%">
+				<div class="skillbar-title" style="background: #27ae60;"><span>SEO</span></div>
+				<div class="skillbar-bar" style="background: #2ecc71;"></div>
+				<div class="skill-bar-percent">100%</div>
+			</div> <!-- End Skill Bar -->
+
+			<div class="skillbar clearfix " data-percent="70%">
+				<div class="skillbar-title" style="background: #124e8c;"><span>Photoshop</span></div>
+				<div class="skillbar-bar" style="background: #4288d0;"></div>
+				<div class="skill-bar-percent">70%</div>
+			</div> <!-- End Skill Bar -->
+    			</div>
 			</div>
 		</div>
 	</section>
 	<footer>
-		<div class="footmar" id = "contact">
-		<hr>
-			Contact Me at:
-			<br>
-			+91 9674428147<br>
-			<a href="https://mail.google.com/mail/u/0/?view=cm&fs=1&to=viveksome@gmail.com" style="color: white;"><i class="fa fa-envelope" aria-hidden="true"></i>&nbsp;viveksome@gmail.com</a><br>
-			<a href=""><i class="fa fa-facebook-square" aria-hidden="true" style="color: #3B5998"></i></a>
-			<a href=""><i class="fa fa-google-plus" aria-hidden="true" style="color: #D62221"></i></a>
-			<a href=""><i class="fa fa-twitter-square" aria-hidden="true" style="color: #1DA1F2"></i></a>
-
+		<div class="foot" data-aos="zoom-in-up">
+			<span class="section-heading">Contact Me</span>
 		</div>
+
+		<div class="newFooter">
+			<div class="container">
+				
+				<form id="contact">
+				  <div class="form-group">
+				    <label for="exampleInputEmail1">Email address</label>
+				    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+				  </div>
+				  <div class="form-group">
+				    <label for="exampleInputPassword1">Password</label>
+				    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+				  </div>
+				  <div class="form-group">
+				    <label for="exampleFormControlTextarea1">Example textarea</label>
+				    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+				  </div>
+				  <button type="submit" class="btn btn-primary">Submit</button>
+				</form>
+			</div>
+		</div>
+		<!-- <div class="footmar" id = "contact">
+			<hr>
+				Contact Me at:
+				<br>
+				+91 9674428147<br>
+				<a href="https://mail.google.com/mail/u/0/?view=cm&fs=1&to=viveksome@gmail.com" style="color: black;"><i class="fa fa-envelope" aria-hidden="true"></i>&nbsp;viveksome@gmail.com</a><br>
+				<a href=""><i class="fa fa-facebook-square" aria-hidden="true" style="color: #3B5998"></i></a>
+				<a href=""><i class="fa fa-google-plus" aria-hidden="true" style="color: #D62221"></i></a>
+				<a href=""><i class="fa fa-twitter-square" aria-hidden="true" style="color: #1DA1F2"></i></a>
+		</div> -->
 	</footer>
 
+	<script src="https://use.fontawesome.com/1ee0256bc4.js"></script>
 
+	<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+	<script type="text/javascript">
+		AOS.init();
+	</script>
+
+
+	<script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+	
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$(window).scroll(function(){
+			  if(($(this).scrollTop() > 0) & ($(this).scrollTop() <650))
+			  {
+			  $(".navbar").css({"opacity":"0"})
+			    $(".navbar").css({"visibility":"hidden"})
+			  }
+			  else {
+			    $('nav').toggleClass('scrolled', $(this).scrollTop() > 650);
+			    $(".navbar").css({"opacity":"1"});
+			      $(".navbar").css({"visibility":"visible"})
+			  }
+			  
+			});
+
+			$('#contact').submit(function(e){
+				e.preventDefault();
+
+				let data = {
+					from:'frf@jj.com',
+					subject:'ola',
+					message:'how are you?  hiiiii'
+				}
+
+			    $.ajax({	
+			    			type: "POST",
+							url: 'https://limitless-sands-23673.herokuapp.com/contact',
+							data: data,
+
+			                success : function(response){
+
+			                	console.log(response)
+			                    
+			                },
+			                error : function(request,errorType,errorMessage){
+
+			                },
+
+			                timeout:7000, // in ms
+
+			                beforeSend : function(){
+
+
+			                },
+
+			                complete : function(){
+
+
+			                }
+
+			            }//end argument list 
+			        );// end ajax call 
+			    })
+			
+
+		});
+
+		document.addEventListener('aos:in', ({ detail }) => {
+		  console.log('animated in', detail);
+		  if (!$(detail).hasClass("prog") && !$(detail).hasClass("foot")) {
+		  	$('.skillbar').each(function(){
+				$(this).find('.skillbar-bar').animate({
+					width:0
+				},10);
+			});
+		  }
+		  if ($(detail).hasClass("prog")) {
+		  	$('.skillbar').each(function(){
+				$(this).find('.skillbar-bar').animate({
+					width:$(this).attr('data-percent')
+				},1000);
+			});
+		  }
+		  
+		})
+	</script>
 </body>
-<script src="https://use.fontawesome.com/1ee0256bc4.js"></script>
 </html>
