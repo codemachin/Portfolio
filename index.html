@@ -299,7 +299,7 @@
 	
 	<script type="text/javascript">
 		$(document).ready(function(){
-			$('html').css({opacity: 0, visibility: "visible"}).animate({opacity: 1}, 350);
+			
 			$(window).scroll(function(){
 			  if(($(this).scrollTop() > 0) & ($(this).scrollTop() <650))
 			  {
@@ -374,6 +374,9 @@
 		  }
 		  
 		})
+		window,onload = function(){
+			$('html').css({opacity: 0, visibility: "visible"}).animate({opacity: 1}, 350);
+		}
 	</script>
 </body>
 </html>
