@@ -253,19 +253,31 @@
 
 		<div class="newFooter">
 			<div class="container">
+				<div id="success-alert" class="alert alert-success alert-dismissible fade show" role="alert">
+				  Email successfully sent to VIVEK SHANKAR !!!
+				  <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+				    <span aria-hidden="true">&times;</span>
+				  </button>
+				</div>
+				<div id="danger-alert" class="alert alert-danger alert-dismissible fade show" role="alert">
+				  Email sending failed. Some error occurred !!!
+				  <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+				    <span aria-hidden="true">&times;</span>
+				  </button>
+				</div>
 				
 				<form id="contact">
 				  <div class="form-group">
-				    <label for="exampleInputEmail1">Email address</label>
-				    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+				    <label for="email">Email address</label>
+				    <input type="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="Enter email">
 				  </div>
 				  <div class="form-group">
-				    <label for="exampleInputPassword1">Password</label>
-				    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+				    <label for="subject">Subject</label>
+				    <input type="text" class="form-control" id="subject" placeholder="Enter subject">
 				  </div>
 				  <div class="form-group">
-				    <label for="exampleFormControlTextarea1">Example textarea</label>
-				    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+				    <label for="message">Message</label>
+				    <textarea class="form-control" id="message" rows="3"></textarea>
 				  </div>
 				  <button type="submit" class="btn btn-primary">Submit</button>
 				</form>
@@ -299,7 +311,7 @@
 	
 	<script type="text/javascript">
 		$(document).ready(function(){
-			
+			$(".alert").hide();
 			$(window).scroll(function(){
 			  if(($(this).scrollTop() > 0) & ($(this).scrollTop() <650))
 			  {
@@ -317,10 +329,14 @@
 			$('#contact').submit(function(e){
 				e.preventDefault();
 
+				let email = $.trim($('#email').val());
+				let subject = $.trim($('#subject').val());
+				let message = $.trim($('#message').val());
+
 				let data = {
-					from:'frf@jj.com',
-					subject:'ola',
-					message:'how are you?  hiiiii'
+					email:email,
+					subject:subject,
+					message:message
 				}
 
 			    $.ajax({	
@@ -330,11 +346,25 @@
 
 			                success : function(response){
 
-			                	console.log(response)
+			                	if(response.success){
+			                		
+					                $("#success-alert").fadeTo(2000, 500).slideUp(500, function(){
+					               		$("#success-alert").slideUp(500);
+					                });
+					                $('#email').val("");
+					                $('#subject').val("");
+					                $('#message').val("");   
+			                	}else{
+			                		$("#danger-alert").fadeTo(2000, 500).slideUp(500, function(){
+					               		$("#danger-alert").slideUp(500);
+					                });  
+			                	}
 			                    
 			                },
 			                error : function(request,errorType,errorMessage){
-
+			                	$("#danger-alert").fadeTo(2000, 500).slideUp(500, function(){
+				               		$("#danger-alert").slideUp(500);
+				                });
 			                },
 
 			                timeout:7000, // in ms
