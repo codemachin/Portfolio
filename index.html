@@ -392,6 +392,13 @@
 
 			})
 
+			$('.item4').click(function(e){
+				$('html, body').animate({
+			        scrollTop: $('#item-2').offset().top
+			    }, 500);
+
+			})
+
 			$('#contact').submit(function(e){
 				e.preventDefault();
 				$('#emailSend').css({'background-color':'#6c757d'})
