@@ -26,7 +26,7 @@
 
 </nav> -->
 
-<body>
+<body data-spy="scroll" data-target=".navbar-collapse" data-offset="50">
 	<header>
 		<nav id="navbar" class="navbar navbar-expand-sm navbar-default fixed-top" style="color: white">
 		  <a class="navbar-brand">Vivek Shankar</a>
@@ -36,23 +36,26 @@
 		  <div class="collapse navbar-collapse justify-content-end" id="collapsibleNavbar">
 		    <ul class="navbar-nav">
 		      <li class="nav-item">
-		        <a class="nav-link" >Home</a>
+		        <a class="nav-link active" data-target="#item-1">Home</a>
 		      </li>
 		      <li class="nav-item">
-		        <a class="nav-link" >Work</a>
+		        <a class="nav-link" data-target="#item-2">Work</a>
 		      </li>
 		      <li class="nav-item">
-		        <a class="nav-link" >About</a>
+		        <a class="nav-link" data-target="#item-3">About</a>
 		      </li>
 		      <li class="nav-item">
-		        <a class="nav-link" >Contact</a>
+		        <a class="nav-link" data-target="#item-4">Skills</a>
+		      </li> 
+		      <li class="nav-item">
+		        <a class="nav-link" data-target="#item-5">Contact</a>
 		      </li>    
 		    </ul>
 		  </div>
 		</nav>
 		
 	</header>
-	<section id="bg" style="height: 100vh">
+	<section id="item-1" style="height: 100vh">
 		<div class="container" id="home">
 			<div class="item1" style="color: #D4571E">Portfolio</div>
 			<div class="item2">
@@ -65,7 +68,7 @@
 			<div class="item4 bounce"><i class="fas fa-long-arrow-alt-down"></i></div>
 		</div>
 	</section>
-	<section style="padding-top: 4%">
+	<section id="item-2" style="padding-top: 4%">
 		<div data-aos="zoom-in-up">
 			<span class="section-heading">Some Projects</span>
 		</div>
@@ -130,7 +133,7 @@
 		</div>
 
 	</section>
-	<section class="featured-card-section" style="padding-top: 4%;margin-bottom: 40px;">
+	<section id="item-3" class="featured-card-section" style="padding-top: 4%;margin-bottom: 40px;">
 		<div data-aos="zoom-in-up">
 			<span class="section-heading">Some Projects</span>
 		</div>
@@ -177,7 +180,7 @@
     			                         <div class="card" style="box-shadow: 0 -2px 40px rgba(142,156,172,.2);">
                     <div class="image-wrap" style="background-image: url(rkmv.jpg)">                             
 	                    <div class="company-logo">
-	            						<img typeof="foaf:Image" src="CBSE-CLASS-X-LOGO.jpg" width="100%" alt="">             
+	            						<img typeof="foaf:Image" src="x.jpg" width="100%" alt="">             
 	            		</div>          
                     </div>
                     <div class="text-wrap">
@@ -194,7 +197,7 @@
                 </div>
         </div>
 	</section>
-	<section>
+	<section id="item-4">
 		<div class="checker" data-aos="zoom-in-up">
 			<span class="section-heading">Skills</span>
 		</div>
@@ -246,7 +249,7 @@
 			</div>
 		</div>
 	</section>
-	<footer>
+	<footer id="item-5">
 		<div class="foot" data-aos="zoom-in-up">
 			<span class="section-heading">Contact Me</span>
 		</div>
@@ -342,6 +345,7 @@
 				<a href=""><i class="fa fa-twitter-square" aria-hidden="true" style="color: #1DA1F2"></i></a>
 		</div> -->
 	</footer>
+	<button onclick="topFunction()" id="myBtn" title="Go to top"><i class="fa fa-arrow-circle-up" aria-hidden="true" style="color: white;font-size: 2em"></i></button>
 
 	<script src="https://use.fontawesome.com/1ee0256bc4.js"></script>
 
@@ -365,14 +369,28 @@
 			  {
 			  $(".navbar").css({"opacity":"0"})
 			    $(".navbar").css({"visibility":"hidden"})
+			    document.getElementById("myBtn").style.display = "none";
 			  }
 			  else {
 			    $('nav').toggleClass('scrolled', $(this).scrollTop() > 650);
 			    $(".navbar").css({"opacity":"1"});
 			      $(".navbar").css({"visibility":"visible"})
+			      if($(this).scrollTop() > 650){
+			      	document.getElementById("myBtn").style.display = "block";
+			      }else{
+			      	document.getElementById("myBtn").style.display = "none";
+			      }
 			  }
 			  
 			});
+
+			$('.nav-link').click(function(e){
+				let id = $(this).attr('data-target');
+				$('html, body').animate({
+			        scrollTop: $(id).offset().top
+			    }, 500);
+
+			})
 
 			$('#contact').submit(function(e){
 				e.preventDefault();
@@ -435,6 +453,12 @@
 			
 
 		});
+
+		function topFunction() {
+		    $('html, body').animate({
+			        scrollTop: 0
+			}, 500);
+		}
 
 		document.addEventListener('aos:in', ({ detail }) => {
 		  console.log('animated in', detail);

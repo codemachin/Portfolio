@@ -216,7 +216,7 @@ blockquote{
   line-height:1.6;
   position: relative;
   background:#EDEDED;
-  white-space: nowrap;
+  white-space: pre-wrap;
 }
 
 blockquote::before{
@@ -229,10 +229,35 @@ blockquote::before{
   top:-10px;
 }
 
+#myBtn {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 30px;
+  z-index: 99;
+  border: none;
+  outline: none;
+  background-color: #fb1919a6;
+  color: white;
+  cursor: pointer;
+  padding: 5px;
+  border-radius: 50%;
+}
+
+#myBtn:hover {
+  background-color: #555;
+}
+
 blockquote::after{
   content: '';
 }
-
+.navbar-nav .nav-item .active{
+	color:white !important;
+}
+.navbar-nav .nav-item .nav-link{
+	color: #c1c1c1;
+	cursor: pointer;
+}
 blockquote span{
   display:block;
   color:#333333;
@@ -245,7 +270,7 @@ blockquote span{
 	font-size: 1.5em;
 	font-weight: 300;
 }
-#bg{
+#item-1{
 	background:
 	linear-gradient(
       rgba(218, 230, 167, 0.08),
