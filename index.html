@@ -279,7 +279,7 @@
 				    <label for="message">Message</label>
 				    <textarea class="form-control" id="message" rows="3"></textarea>
 				  </div>
-				  <button type="submit" class="btn btn-primary">Submit</button>
+				  <button type="submit" id="emailSend" class="btn btn-primary">Submit</button>
 				</form>
 			</div>
 		</div>
@@ -328,6 +328,7 @@
 
 			$('#contact').submit(function(e){
 				e.preventDefault();
+				$('#emailSend').css({'background-color':'#6c757d'})
 
 				let email = $.trim($('#email').val());
 				let subject = $.trim($('#subject').val());
@@ -345,7 +346,7 @@
 							data: data,
 
 			                success : function(response){
-
+			                	$('#emailSend').css({'background-color':'#007bff'})
 			                	if(response.success){
 			                		
 					                $("#success-alert").fadeTo(2000, 500).slideUp(500, function(){
@@ -362,6 +363,7 @@
 			                    
 			                },
 			                error : function(request,errorType,errorMessage){
+			                	$('#emailSend').css({'background-color':'#007bff'})
 			                	$("#danger-alert").fadeTo(2000, 500).slideUp(500, function(){
 				               		$("#danger-alert").slideUp(500);
 				                });
