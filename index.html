@@ -406,10 +406,8 @@
 	
 	<script type="text/javascript">
 		$(document).ready(function(){
-			$('#loader').css({'display':'none'}).animate({opacity: 0}, 400);
-			$('body').css({'overflow':'visible'})
-			$('section,footer,header').css({opacity: 0, display: "block"}).animate({opacity: 1}, 350);
-			$(".alert").hide();
+			
+
 
 			$(window).scroll(function(){
 			  if(($(this).scrollTop() > 0) & ($(this).scrollTop() <650))
@@ -532,7 +530,11 @@
 		  
 		})
 		window.onload = function(){
-
+			$('body').css({'overflow':'visible'})
+			$('section,footer,header').css({opacity: 0, display: "block"}).animate({opacity: 1}, 350);
+			$(".alert").hide();
+			$('#loader').css({'display':'none'}).animate({opacity: 0}, 500);
+			AOS.refresh();
 		}
 	</script>
 </body>
