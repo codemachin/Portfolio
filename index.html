@@ -12,6 +12,7 @@
 	<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 	<link href="port.css" rel ="stylesheet">
+	<link href="loader.css" rel ="stylesheet">
 </head>
 
 <body data-spy="scroll" data-target=".navbar-collapse" data-offset="50">
@@ -63,7 +64,7 @@
 		<div id="cardsme" class = "someProjects container-fluid">
 			<div data-aos="zoom-in-up" class="wrap" style="display:flex;justify-content: space-around ;">
 				<div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 card bg-dark text-white">
-				  <img class="card-img" src="inv.jpg" alt="Card image" width="100%">
+				  <img class="card-img img-fluid" src="inv.jpg" alt="Card image" width="100%">
 				  <div class="card-img-overlay">
 				    <h5 class="card-title">Inventory Management</h5>
 				    <p class="card-text">Used to manage college inventory.</p>
@@ -80,7 +81,7 @@
 					<blockquote>Ecommerce website</blockquote>
 				</div>
 				<div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 card bg-dark text-white">
-				  <img class="card-img" src="ecom.jpeg" alt="Card image" width="100%">
+				  <img class="card-img img-fluid" src="ecom.jpeg" alt="Card image" width="100%">
 				  <div class="card-img-overlay">
 				    <h5 class="card-title">Ecommerce Website</h5>
 				    <p class="card-text">Ecommerce website for college project.</p>
@@ -91,7 +92,7 @@
 			
 			<div data-aos="zoom-in-up" class="wrap" style="display:flex;justify-content: space-around ;">
 				<div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 card bg-dark text-white">
-				  <img class="card-img" src="tnt.jpg" alt="Card image" width="100%">
+				  <img class="card-img img-fluid" src="tnt.jpg" alt="Card image" width="100%">
 				  <div class="card-img-overlay">
 				    <h5 class="card-title">Travel Management</h5>
 				    <p class="card-text">Website and app with php backend.</p>
@@ -108,7 +109,7 @@
 					<blockquote>Socket Chat Application</blockquote>
 				</div>
 				<div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 card bg-dark text-white">
-				  <img class="card-img" src="chat.jpg" alt="Card image" width="100%">
+				  <img class="card-img img-fluid" src="chat.jpg" alt="Card image" width="100%">
 				  <div class="card-img-overlay">
 				    <h5 class="card-title">Chat App</h5>
 				    <p class="card-text">Private chat app between registered user.</p>
@@ -119,10 +120,10 @@
 
 			<div data-aos="zoom-in-up" class="wrap" style="display:flex;justify-content: space-around ;">
 				<div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 card bg-dark text-white">
-				  <img class="card-img" src="sup.jpg" alt="Card image" width="100%">
+				  <img class="card-img img-fluid" src="sup.jpg" alt="Card image" width="100%">
 				  <div class="card-img-overlay">
 				    <h5 class="card-title">Ticket based Support</h5>
-				    <p class="card-text">Support system with proper admin and user logins to solve user queries through chat like interface.</p>
+				    <p class="card-text">Support system with chat like interface.</p>
 				    <p class="card-text">during Sep 2017</p>
 				  </div>
 				</div>
@@ -136,7 +137,7 @@
 					<blockquote>Live test taking system</blockquote>
 				</div>
 				<div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 card bg-dark text-white">
-				  <img class="card-img" src="q.jpg" alt="Card image" width="100%">
+				  <img class="card-img img-fluid" src="q.jpg" alt="Card image">
 				  <div class="card-img-overlay">
 				    <h5 class="card-title">Live Test</h5>
 				    <p class="card-text">Live test system with admin and user panels to take test with real time monitoring.</p>
@@ -367,6 +368,26 @@
 		</div> -->
 	</footer>
 	<button onclick="topFunction()" id="myBtn" title="Go to top"><i class="fa fa-arrow-circle-up" aria-hidden="true" style="color: white;font-size: 2em"></i></button>
+<div id="loader">
+		<div id="particles-background" class="vertical-centered-box"></div>
+<div id="particles-foreground" class="vertical-centered-box"></div>
+
+<div class="vertical-centered-box">
+  <div class="content">
+    <div class="loader-circle"></div>
+    <div class="loader-line-mask">
+      <div class="loader-line"></div>
+    </div>
+    <img id="prism-logo" width="20%" src="vs.png">
+    <!-- <svg width="36" viewBox="0 0 36 20" id="prism-logo">
+      <path id="prism-logo-p2" d="M2.000,0.000 C2.000,0.000 21.000,20.000 21.000,20.000 C21.000,20.000 34.000,20.000 34.000,20.000 C34.000,20.000 14.000,0.000 14.000,0.000 C14.000,0.000 2.000,0.000 2.000,0.000 Z" fill="rgba(255,255,255,.7)"/>
+      <path id="prism-logo-p1" d="M11.957,2.070 C11.957,0.913 12.680,0.001 14.056,0.001 C14.135,0.001 2.840,0.001 2.099,0.001 C1.359,0.001 0.000,0.814 0.000,2.070 C0.000,3.327 0.000,20.001 0.000,20.001 C0.000,20.001 11.957,20.001 11.957,20.001 C11.957,20.001 11.957,11.414 11.957,2.070 Z" fill="#fff"/>
+      <path id="prism-logo-p3" d="M24.007,17.933 C24.007,19.090 23.286,20.001 21.913,20.001 C21.835,20.001 33.167,20.001 33.906,20.001 C34.645,20.001 36.000,19.189 36.000,17.933 C36.000,16.676 36.000,0.001 36.000,0.001 C36.000,0.001 24.007,0.001 24.007,0.001 C24.007,0.001 24.007,8.588 24.007,17.933 Z" fill="#fff"/>
+    </svg>
+ -->  </div>
+</div>
+</div>
+
 
 	<script src="https://use.fontawesome.com/1ee0256bc4.js"></script>
 
@@ -381,10 +402,15 @@
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
 
 	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+	<script src="loader.js"></script>
 	
 	<script type="text/javascript">
 		$(document).ready(function(){
+			$('#loader').css({'display':'none'}).animate({opacity: 0}, 400);
+			$('body').css({'overflow':'visible'})
+			$('section,footer,header').css({opacity: 0, display: "block"}).animate({opacity: 1}, 350);
 			$(".alert").hide();
+
 			$(window).scroll(function(){
 			  if(($(this).scrollTop() > 0) & ($(this).scrollTop() <650))
 			  {
@@ -505,8 +531,8 @@
 		  }
 		  
 		})
-		window,onload = function(){
-			$('html').css({opacity: 0, visibility: "visible"}).animate({opacity: 1}, 350);
+		window.onload = function(){
+
 		}
 	</script>
 </body>
