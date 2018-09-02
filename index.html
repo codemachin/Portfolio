@@ -489,7 +489,6 @@
 		}
 
 		document.addEventListener('aos:in', ({ detail }) => {
-		  console.log('animated in', detail);
 		  if (!$(detail).hasClass("prog") && !$(detail).hasClass("foot")) {
 		  	$('.skillbar').each(function(){
 				$(this).find('.skillbar-bar').animate({
