@@ -394,7 +394,8 @@ section {
 }
 .newFooter div form .form-group input, .newFooter div form .form-group textarea{
 	color:white;
-	background: #022144 ;
+	background: #021427;
+	border : none;
 }
 .newFooter div form .form-group label{
 	color:white;
