@@ -328,6 +328,13 @@ blockquote span{
 .item3{
 	margin-bottom: 15%;
 }
+.svg {
+    fill: #fff;
+}
+
+.svgCl .svg:not(:last-child){
+    margin-right: 20px
+}
 .item4{
 	margin-bottom: -18%;
 }
@@ -368,7 +375,7 @@ section {
 	color:white;
 }
 .newFooter .container{
-	padding:2%;
+	padding:9%;
 }
 textarea {
    resize: none;
