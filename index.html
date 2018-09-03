@@ -9,8 +9,9 @@
 	<link rel="shortcut icon" type="image/jpg" href="./images/vs.jpg?v=2"/>
 	<link href="https://fonts.googleapis.com/css?family=Libre+Franklin:300,400|Roboto" rel="stylesheet">
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
-	<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+	<link rel="stylesheet" href="./css/aos.css" />
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
 	<link href="./css/port.css" rel ="stylesheet">
 	<link href="./css/loader.css" rel ="stylesheet">
 </head>
@@ -68,7 +69,7 @@
 				  <div class="card-img-overlay">
 				    <h5 class="card-title">Inventory Management</h5>
 				    <p class="card-text">Used to manage college inventory.</p>
-				    <p class="card-text">during Jan 2017</p>
+				    <p class="card-text d-md-none d-lg-block">during Jan 2017</p>
 				  </div>
 				</div>
 				<div style="justify-content : center;">
@@ -85,7 +86,7 @@
 				  <div class="card-img-overlay">
 				    <h5 class="card-title">Ecommerce Website</h5>
 				    <p class="card-text">Ecommerce website for college project.</p>
-				    <p class="card-text">during March 2017</p>
+				    <p class="card-text d-md-none d-lg-block">during March 2017</p>
 				  </div>
 				</div>
 			</div>
@@ -96,7 +97,7 @@
 				  <div class="card-img-overlay">
 				    <h5 class="card-title">Travel Management</h5>
 				    <p class="card-text">Website and app with php backend.</p>
-				    <p class="card-text">during June 2017</p>
+				    <p class="card-text d-md-none d-lg-block">during June 2017</p>
 				  </div>
 				</div>
 				<div style="justify-content : center;">
@@ -113,7 +114,7 @@
 				  <div class="card-img-overlay">
 				    <h5 class="card-title">Chat App</h5>
 				    <p class="card-text">Private chat app between registered user.</p>
-				    <p class="card-text">during Sep 2017</p>
+				    <p class="card-text d-md-none d-lg-block">during Sep 2017</p>
 				  </div>
 				</div>
 			</div>
@@ -124,7 +125,7 @@
 				  <div class="card-img-overlay">
 				    <h5 class="card-title">Ticket based Support</h5>
 				    <p class="card-text">Support system with chat like interface.</p>
-				    <p class="card-text">during Sep 2017</p>
+				    <p class="card-text d-md-none d-lg-block">during Sep 2017</p>
 				  </div>
 				</div>
 				<div style="justify-content : center;">
@@ -141,7 +142,7 @@
 				  <div class="card-img-overlay">
 				    <h5 class="card-title">Live Test</h5>
 				    <p class="card-text">Live test system with admin and user panels to take test with real time monitoring.</p>
-				    <p class="card-text">during Sep 2017</p>
+				    <p class="card-text d-md-none d-lg-block">during Sep 2017</p>
 				  </div>
 				</div>
 			</div>
@@ -281,31 +282,19 @@
 				<div style="text-align: center;color:#007bff">
 					Have a question or want to work together?
 				</div>
-				<div id="success-alert" class="alert alert-success alert-dismissible fade show" role="alert">
-				  Email successfully sent to VIVEK SHANKAR !!!
-				  <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-				    <span aria-hidden="true">&times;</span>
-				  </button>
-				</div>
-				<div id="danger-alert" class="alert alert-danger alert-dismissible fade show" role="alert">
-				  Email sending failed. Some error occurred !!!
-				  <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-				    <span aria-hidden="true">&times;</span>
-				  </button>
-				</div>
 				
-				<form id="contact">
+				<form id="contact" novalidate>
 				  <div class="form-group">
 				    <label for="email">Email address</label>
-				    <input type="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="Enter email">
+				    <input autocomplete="off" type="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="Enter email">
 				  </div>
 				  <div class="form-group">
 				    <label for="subject">Subject</label>
-				    <input type="text" class="form-control" id="subject" placeholder="Enter subject">
+				    <input autocomplete="off" type="text" class="form-control" id="subject" placeholder="Enter subject">
 				  </div>
 				  <div class="form-group">
 				    <label for="message">Message</label>
-				    <textarea class="form-control" id="message" rows="3"></textarea>
+				    <textarea autocomplete="off" class="form-control" id="message" rows="3"></textarea>
 				  </div>
 				  <button type="submit" id="emailSend" class="btn btn-primary">Submit</button>
 				</form>
@@ -391,7 +380,7 @@
 
 	<script src="https://use.fontawesome.com/1ee0256bc4.js"></script>
 
-	<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+	<script src="./js/aos.js"></script>
 	<script type="text/javascript">
 		AOS.init();
 	</script>
@@ -402,140 +391,12 @@
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
 
 	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+	<script src="https://cdn.rawgit.com/PascaleBeier/bootstrap-validate/v2.1.3/dist/bootstrap-validate.js" ></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
 	<script src="./js/loader.js"></script>
 	
-	<script type="text/javascript">
-		$(document).ready(function(){
-			
+	<script src="./js/app.js">
 
-
-			$(window).scroll(function(){
-			  if(($(this).scrollTop() > 0) & ($(this).scrollTop() <650))
-			  {
-			  $(".navbar").css({"opacity":"0"})
-			    $(".navbar").css({"visibility":"hidden"})
-			    document.getElementById("myBtn").style.display = "none";
-			  }
-			  else {
-			    $('nav').toggleClass('scrolled', $(this).scrollTop() > 650);
-			    $(".navbar").css({"opacity":"1"});
-			      $(".navbar").css({"visibility":"visible"})
-			      if($(this).scrollTop() > 650){
-			      	document.getElementById("myBtn").style.display = "block";
-			      }else{
-			      	document.getElementById("myBtn").style.display = "none";
-			      }
-			  }
-			  
-			});
-
-			$('.nav-link').click(function(e){
-				let id = $(this).attr('data-target');
-				$('html, body').animate({
-			        scrollTop: $(id).offset().top
-			    }, 500);
-
-			})
-
-			$('.item4').click(function(e){
-				$('html, body').animate({
-			        scrollTop: $('#item-2').offset().top
-			    }, 500);
-
-			})
-
-			$('#contact').submit(function(e){
-				e.preventDefault();
-				$('#emailSend').css({'background-color':'#6c757d'})
-
-				let email = $.trim($('#email').val());
-				let subject = $.trim($('#subject').val());
-				let message = $.trim($('#message').val());
-
-				let data = {
-					email:email,
-					subject:subject,
-					message:message
-				}
-
-			    $.ajax({	
-			    			type: "POST",
-							url: 'https://limitless-sands-23673.herokuapp.com/contact',
-							data: data,
-
-			                success : function(response){
-			                	$('#emailSend').css({'background-color':'#007bff'})
-			                	if(response.success){
-			                		
-					                $("#success-alert").fadeTo(2000, 500).slideUp(500, function(){
-					               		$("#success-alert").slideUp(500);
-					                });
-					                $('#email').val("");
-					                $('#subject').val("");
-					                $('#message').val("");   
-			                	}else{
-			                		$("#danger-alert").fadeTo(2000, 500).slideUp(500, function(){
-					               		$("#danger-alert").slideUp(500);
-					                });  
-			                	}
-			                    
-			                },
-			                error : function(request,errorType,errorMessage){
-			                	$('#emailSend').css({'background-color':'#007bff'})
-			                	$("#danger-alert").fadeTo(2000, 500).slideUp(500, function(){
-				               		$("#danger-alert").slideUp(500);
-				                });
-			                },
-
-			                timeout:25000, // in ms
-
-			                beforeSend : function(){
-
-
-			                },
-
-			                complete : function(){
-
-
-			                }
-
-			            }//end argument list 
-			        );// end ajax call 
-			    })
-			
-
-		});
-
-		function topFunction() {
-		    $('html, body').animate({
-			        scrollTop: 0
-			}, 500);
-		}
-
-		document.addEventListener('aos:in', ({ detail }) => {
-		  if (!$(detail).hasClass("prog") && !$(detail).hasClass("foot")) {
-		  	$('.skillbar').each(function(){
-				$(this).find('.skillbar-bar').animate({
-					width:0
-				},10);
-			});
-		  }
-		  if ($(detail).hasClass("prog")) {
-		  	$('.skillbar').each(function(){
-				$(this).find('.skillbar-bar').animate({
-					width:$(this).attr('data-percent')
-				},1000);
-			});
-		  }
-		  
-		})
-		window.onload = function(){
-			$('body').css({'overflow':'visible'})
-			$('section,footer,header').css({opacity: 0, display: "block"}).animate({opacity: 1}, 350);
-			$(".alert").hide();
-			$('#loader').css({'display':'none'}).animate({opacity: 0}, 500);
-			AOS.refresh();
-		}
 	</script>
 </body>
 </html>
