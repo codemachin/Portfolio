@@ -240,7 +240,7 @@ blockquote span{
       rgba(0, 0, 0, 0.56)
     ),
     /* bottom, image */
-    url(1.jpg) center center no-repeat scroll;
+    url(../images/1.jpg) center center no-repeat scroll;
     background-position: center;
     background-size: cover;
     -webkit-background-size: cover;
