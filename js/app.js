@@ -80,7 +80,7 @@
 
 			    $.ajax({	
 			    			type: "POST",
-							url: 'http://13.59.23.63/contact',
+							url: 'https://limitless-sands-23673.herokuapp.com/contact',
 							data: data,
 
 			                success : function(response){
