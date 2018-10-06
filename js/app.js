@@ -69,7 +69,7 @@
 				$('#emailSend').css({'background-color':'#6c757d'})
 
 				let email = $.trim($('#email').val());
-				let subject = $.trim($('#subje ct').val());
+				let subject = $.trim($('#subject').val());
 				let message = $.trim($('#message').val());
 
 				let data = {
