@@ -1,8 +1,10 @@
 		AOS.init();
+		// initialize animate on scroll
+
 		bootstrapValidate(['#message'], 'required:Enter at least 1 character!|max:100:Enter 100 chars at most!');
 		bootstrapValidate('#email', 'email:Enter a valid email address!');
 		bootstrapValidate('#subject', 'required:Enter at least 1 character!|max:40:Enter 40 chars at most!');
-
+		// form validate using bootstrap-validate
 
 		let formSubmitFunction = (...id) => {
 			$('#formSubmit').empty();
@@ -17,7 +19,7 @@
 				}
 			}
 			return c>0?false:true		
-		}
+		} //function to check if form is valid or not. Also displays alert
 
 
 		$(document).ready(function(){
@@ -40,22 +42,21 @@
 			      }
 			  }
 			  
-			});
+			}); // function to make navbar transparent and opaque also displays scroll
+				// to top when scroll down
 
 			$('.nav-link').click(function(e){
 				let id = $(this).attr('data-target');
 				$('html, body').animate({
 			        scrollTop: $(id).offset().top
 			    }, 500);
-
-			})
+			})// smooth scroll to div on click navigation links
 
 			$('.item4').click(function(e){
 				$('html, body').animate({
 			        scrollTop: $('#item-2').offset().top
 			    }, 500);
-
-			})
+			})// animate down button
 
 			$('#contact').submit(function(e){
 				e.preventDefault();
@@ -68,7 +69,7 @@
 				$('#emailSend').css({'background-color':'#6c757d'})
 
 				let email = $.trim($('#email').val());
-				let subject = $.trim($('#subject').val());
+				let subject = $.trim($('#subje ct').val());
 				let message = $.trim($('#message').val());
 
 				let data = {
@@ -79,7 +80,7 @@
 
 			    $.ajax({	
 			    			type: "POST",
-							url: 'https://limitless-sands-23673.herokuapp.com/contact',
+							url: 'http://13.59.23.63/contact',
 							data: data,
 
 			                success : function(response){
@@ -116,7 +117,8 @@
 
 			            }//end argument list 
 			        );// end ajax call 
-			    })
+			}) // end form submit call back
+			// ajax to my heroku app that sends email
 			
 
 		});
@@ -125,7 +127,7 @@
 		    $('html, body').animate({
 			        scrollTop: 0
 			}, 500);
-		}
+		}// scroll to top animation
 
 		document.addEventListener('aos:in', ({ detail }) => {
 		  if (!$(detail).hasClass("prog") && !$(detail).hasClass("foot")) {
@@ -134,14 +136,14 @@
 					width:0
 				},10);
 			});
-		  }
+		  }// reset skill bar when scroll up or down
 		  if ($(detail).hasClass("prog")) {
 		  	$('.skillbar').each(function(){
 				$(this).find('.skillbar-bar').animate({
 					width:$(this).attr('data-percent')
 				},1000);
 			});
-		  }
+		  }// start skillbar animation on focus
 		  
 		})
 		window.onload = function(){
@@ -150,4 +152,5 @@
 			$(".alert").hide();
 			$('#loader').css({'display':'none'}).animate({opacity: 0}, 500);
 			AOS.refresh();
+			// page on load functions
 		}

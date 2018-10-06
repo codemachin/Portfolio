@@ -1,5 +1,7 @@
+/*hide section footer header at start*/
 section,footer,header{ display: none; }
 
+/*body css*/
 body{
 	font-size: 1em;
 	line-height: 1.5em;
@@ -7,6 +9,7 @@ body{
 	overflow: hidden;
 }
 
+/*start skillbar css*/
 .skillbar {
 	position:relative;
 	display:block;
@@ -33,7 +36,7 @@ body{
 	position:absolute;
 	top:0;
 	left:0;
-width:110px;
+	width:110px;
 	font-weight:bold;
 	font-size:13px;
 	color:#ffffff;
@@ -79,6 +82,8 @@ width:110px;
 	color:#ffffff;
 	color:rgba(0, 0, 0, 0.4);
 }
+
+/*card font css*/
 .regular {
     font-family: "acta-display", Georgia, Times New Roman, serif !important;
     font-style: normal;
@@ -91,6 +96,7 @@ width:110px;
     font-size: 0.7em;
 }
 
+/*cards wrapper css*/
 #cardsme{
 	display: flex;
 	flex-direction: column;
@@ -98,22 +104,29 @@ width:110px;
 	padding-top: 2%;
 
 }
+
+#cardsme div:not(:last-child){
+	margin-bottom: 20px;
+}
+
 #cardsme .card{
 	padding: 0;
 	height: fit-content;
 	overflow: hidden;
 }
 
+/*card texture background*/
 .someProjects {
     background: linear-gradient(#fff,#fff,#e1f3eb,#fff,#fff);
     background-attachment: fixed;
 }
 
+
 section{
 	overflow: hidden;
 }
 
-
+/*bouncing down arrow animation*/
 .bounce {
 	-moz-animation: bounce 2s infinite;
 	-webkit-animation: bounce 2s infinite;
@@ -168,6 +181,7 @@ section{
   }
 }
 
+/*blockquote css*/
 @import url(https://fonts.googleapis.com/css?family=Open+Sans:400italic);
 blockquote{
   font-size: 1.4em;
@@ -193,6 +207,19 @@ blockquote::before{
   top:-10px;
 }
 
+blockquote span{
+  display:block;
+  color:#333333;
+  font-style: normal;
+  font-weight: bold;
+  margin-top:1em;
+}
+
+blockquote::after{
+  content: '';
+}
+
+/*scroll to top button css*/
 #myBtn {
   display: none;
   position: fixed;
@@ -212,9 +239,7 @@ blockquote::before{
   background-color: #555;
 }
 
-blockquote::after{
-  content: '';
-}
+/*navbar css*/
 .navbar-nav .nav-item .active{
 	color:white !important;
 }
@@ -222,18 +247,29 @@ blockquote::after{
 	color: #c1c1c1;
 	cursor: pointer;
 }
-blockquote span{
-  display:block;
-  color:#333333;
-  font-style: normal;
-  font-weight: bold;
-  margin-top:1em;
-}
 
 .nav-item ,.navbar-brand{
 	font-size: 1.5em;
 	font-weight: 300;
 }
+
+.navbar-default {
+  transition: 500ms ease;
+  background: transparent;
+  padding:1% 2% 1% 2%;
+}
+.navbar-default.scrolled {
+  background: #234099
+}
+.navbar .navbar-toggler-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(208, 205, 196, 0.5)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+}
+
+.navbar .navbar-toggler {
+  border-color: white;
+}
+
+/*section 1 background css*/
 #item-1{
 	background:
 	linear-gradient(
@@ -246,6 +282,8 @@ blockquote span{
     background-size: cover;
     -webkit-background-size: cover;
 }
+
+/*education card css*/
 .flex-container {
     width: 100%;
     padding-left: 80px;
@@ -272,11 +310,7 @@ blockquote span{
     -ms-flex-align: center;
     align-items: center;
 }
-@media screen and (min-device-width: 768px) and (max-device-width: 1100px) { 
-    .card-text{
-    	font-size: 0.8em;
-    }
-}
+
 .featured-card-section .card-wrap .card .image-wrap {
     background-size: cover;
     background-position: 50%;
@@ -288,6 +322,12 @@ blockquote span{
     -ms-flex-negative: 0;
     flex-shrink: 0;
 }
+
+.featured-card-section .container .flex-container:not(:last-child){
+	margin-bottom:20px;
+}
+
+/*section heading css*/
 .section-heading{
 	display: block;
 	font-size: 1.5em;
@@ -306,6 +346,7 @@ blockquote span{
     transform: translateY(-1rem);
 }
 
+/*home css*/
 #home{
 	display: flex;
 	justify-content: center;
@@ -326,35 +367,20 @@ blockquote span{
     fill: #fff;
 }
 
+/*end of page icons*/
 .svgCl .svg:not(:last-child){
     margin-right: 20px
 }
 .item4{
 	margin-bottom: -18%;
 }
-.navbar-default {
-  transition: 500ms ease;
-  background: transparent;
-  padding:1% 2% 1% 2%;
-}
-.navbar-default.scrolled {
-  background: #234099
-}
-.navbar .navbar-toggler-icon {
-  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(208, 205, 196, 0.5)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
-}
 
-.navbar .navbar-toggler {
-  border-color: white;
-}
-section {
-	
-}
 .cod{  
   background: transparent;
   padding: 2%;
 }
 
+/*footer css*/
 .newFooter{
 	background-color: #022144;
 }
@@ -369,9 +395,6 @@ section {
 .newFooter .container{
 	padding:9%;
 }
-textarea {
-   resize: none;
-}
 
 .footmar{
 	margin-top: 40px;
@@ -379,14 +402,7 @@ textarea {
 	padding-bottom: 20px;
 }
 
-#cardsme div:not(:last-child){
-	margin-bottom: 20px;
-}
-
-.featured-card-section .container .flex-container:not(:last-child){
-	margin-bottom:20px;
-}
-
+/*general card css*/
 .card {
     /* Add shadows to create the "card" effect */
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
@@ -398,17 +414,23 @@ textarea {
     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.9);
 }
 
-@media screen and (max-width: 767px){
-	section {
-	    padding: 20px 0;
+/*disable text area resize*/
+textarea {
+   resize: none;
+}
+
+/*start media queries*/
+@media screen and (max-width:378px){
+	.featured-card-section .card-wrap .card .image-wrap .company-logo {
+		left: 80%;
 	}
 }
 
-@media screen and (max-width: 1205px){
-	.flex-container {
-	    width: 100%;
-	    padding-left: 0 !important;
-	    padding-right: 0 !important;
+@media screen and (min-width: 768px){
+	.container-fluid{
+		max-width: 1600px;
+		margin-left: auto;
+		margin-right: auto;
 	}
 }
 
@@ -426,35 +448,30 @@ textarea {
 		flex-direction: column-reverse;
 		justify-content: center;
 	}
-}
-
-@media screen and (max-width: 767px){
+	section {
+	    padding: 20px 0;
+	}
 	.featured-card-section .card-wrap .card .image-wrap {
 	    width: calc(100% - 50px);
 	    height: 172px;
 	    margin-right: 0;
 	    margin-bottom: 40px;
 	}
-}
-
-
-@media screen and (max-width:378px){
-	.featured-card-section .card-wrap .card .image-wrap .company-logo {
-		left: 80%;
-	}
-}
-
-
-@media screen and (min-width: 768px){
-	.container-fluid{
-		max-width: 1600px;
-		margin-left: auto;
-		margin-right: auto;
-	}
-}
-
-@media screen and (max-width: 768px){	
 	body{
 		line-height: 1.2em;	
+	}
+}
+
+@media screen and (min-device-width: 768px) and (max-device-width: 1100px) { 
+    .card-text{
+    	font-size: 0.8em;
+    }
+}
+
+@media screen and (max-width: 1205px){
+	.flex-container {
+	    width: 100%;
+	    padding-left: 0 !important;
+	    padding-right: 0 !important;
 	}
 }
